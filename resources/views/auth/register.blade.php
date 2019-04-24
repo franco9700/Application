@@ -61,6 +61,76 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="birthdate" class="col-md-4 col-form-label text-md-right">{{ __('Birthdate') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="birthdate" type="date" class="form-control{{ $errors->has('birthdate') ? ' is-invalid' : '' }}" name="birthdate" value="{{ old('birthdate') }}" required autofocus>
+
+                                @if ($errors->has('birthdate'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('birthdate') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="phone" type="number" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}" required autofocus>
+
+                                @if ($errors->has('phone'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="neighborhood" class="col-md-4 col-form-label text-md-right">{{ __('Neighborhood') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="neighborhood" type="text" class="form-control{{ $errors->has('neighborhood') ? ' is-invalid' : '' }}" name="neighborhood" value="{{ old('neighborhood') }}" required autofocus>
+
+                                @if ($errors->has('neighborhood'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('neighborhood') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="county" class="col-md-4 col-form-label text-md-right">{{ __('County') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="county" type="text" class="form-control{{ $errors->has('county') ? ' is-invalid' : '' }}" name="county" value="{{ old('county') }}" required autofocus>
+
+                                @if ($errors->has('county'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('county') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="usertype" class="col-md-4 col-form-label text-md-right">{{ __('User type') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="usertype" type="text" class="form-control{{ $errors->has('usertype') ? ' is-invalid' : '' }}" name="usertype" value="{{ old('usertype') }}" required autofocus>
+
+                                @if ($errors->has('usertype'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('usertype') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
