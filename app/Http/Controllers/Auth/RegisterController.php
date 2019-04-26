@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Rules\Captcha;
 
 class RegisterController extends Controller
 {
@@ -52,6 +53,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'unique:users'],
             'password' => ['required', 'string', 'confirmed'],
+            'g-recaptcha-response' => new Captcha(),
             /*'phone' => ['required', 'int', 'digits_between:10,13'],
             'neighborhood' => ['required', 'string', 'digits_between:5,50'],
             'county' => ['required', 'string', 'digits_between:10,50'],
