@@ -81,17 +81,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <img src="/images/Find.MI.png" alt="Logo de Find.MI">
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+<!-- Barra de búsqueda   -->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search bar" aria-label="Search bar" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">Search</button>
+                    </div>
                 </div>
             </div>
         </div>
