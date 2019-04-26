@@ -24,7 +24,7 @@
                                 @endif
                             </div>
                         </div>
-
+<!-- Correo electronico    -->
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
@@ -38,7 +38,7 @@
                                 @endif
                             </div>
                         </div>
-
+<!-- Contrase;a   -->
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
@@ -52,7 +52,7 @@
                                 @endif
                             </div>
                         </div>
-
+<!-- confirmar contrase;a    -->
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
@@ -60,7 +60,7 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-
+<!-- Fecha de nacimiento     -->
                         <div class="form-group row">
                             <label for="birthdate" class="col-md-4 col-form-label text-md-right">{{ __('Birthdate') }}</label>
 
@@ -74,12 +74,12 @@
                                 @endif
                             </div>
                         </div>
-
+<!-- Telefono     -->
                         <div class="form-group row">
                             <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label>
 
                             <div class="col-md-6">
-                                <input id="phone" type="number" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}" required autofocus>
+                                <input id="phone" type="tel" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}" required autofocus>
 
                                 @if ($errors->has('phone'))
                                     <span class="invalid-feedback" role="alert">
@@ -88,7 +88,7 @@
                                 @endif
                             </div>
                         </div>
-
+<!-- Colonia     -->
                         <div class="form-group row">
                             <label for="neighborhood" class="col-md-4 col-form-label text-md-right">{{ __('Neighborhood') }}</label>
 
@@ -102,7 +102,7 @@
                                 @endif
                             </div>
                         </div>
-
+<!-- Municipio     -->
                         <div class="form-group row">
                             <label for="county" class="col-md-4 col-form-label text-md-right">{{ __('County') }}</label>
 
@@ -116,13 +116,16 @@
                                 @endif
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="usertype" class="col-md-4 col-form-label text-md-right">{{ __('User type') }}</label>
+<!-- Tipo de Usuario     -->
+                        <div class="form-group  row">
+                            <label for="usertype" class="col-md-4 col-form-label text-md-right" >{{ __('User type') }}</label>
 
                             <div class="col-md-6">
-                                <input id="usertype" type="text" class="form-control{{ $errors->has('usertype') ? ' is-invalid' : '' }}" name="usertype" value="{{ old('usertype') }}" required autofocus>
-
+                                <select id="usertype" type="text" class="form-control{{ $errors->has('usertype') ? ' is-invalid' : '' }} custom-select" name="usertype" value="{{ old('usertype') }}" required autofocus>
+                                    <option selected disabled >Choose...</option>
+                                    <option value="consumer">Consumer</option>
+                                    <option value="provider">Provider</option>
+                                </select>
                                 @if ($errors->has('usertype'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('usertype') }}</strong>
