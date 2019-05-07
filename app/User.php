@@ -37,6 +37,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
+
     public function isProvider(){
         if($this->where('user_type', 'provider')){
             return true;
