@@ -28,6 +28,10 @@
         <main class="py-4">
             @yield('content')
         </main>
+        
+    </div>
+    <div class="align-self-end">
+        @include('partials.footer')
     </div>
 </body>
 </html>
