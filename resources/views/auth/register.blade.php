@@ -116,23 +116,6 @@
                                 @endif
                             </div>
                         </div>
-<!-- Tipo de Usuario     -->
-                        <div class="form-group  row">
-                            <label for="usertype" class="col-md-4 col-form-label text-md-right" >{{ __('User type') }}</label>
-
-                            <div class="col-md-6">
-                                <select id="usertype" type="text" class="form-control{{ $errors->has('usertype') ? ' is-invalid' : '' }} custom-select" name="usertype" value="{{ old('usertype') }}" required autofocus>
-                                    <option selected disabled >Choose...</option>
-                                    <option value="consumer">Consumer</option>
-                                    <option value="provider">Provider</option>
-                                </select>
-                                @if ($errors->has('usertype'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('usertype') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
 
                         <!-- Aqui esta el codigo que se agrego para mostrar el captcha en la vista -->
                         <div class="form-group row">
