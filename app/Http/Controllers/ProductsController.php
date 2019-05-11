@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\products;
+use App\categories;
+use App\subsidiaries;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -12,9 +14,17 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        //$products = Products::where('name', 'LIKE', "%$request->product_name%")->get();
+        $products = Products::Search($request->product_name)->get();
+
+        $products->each(function($products){
+            $products ->category;
+            $products ->subsidiary;
+        });
+
+        return view('results', array('product_search' => $products));
     }
 
     /**
