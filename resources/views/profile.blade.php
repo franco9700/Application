@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Here's your profile information pal.
+                    {{ $user_name['name'] }}
 
                     <h3>Wanna be a provider? Click here to register!<span class="badge badge-secondary">New</span></h3>
                 </div>
