@@ -13,7 +13,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     </head>
-    <body>
+    <body class="body">
 
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
