@@ -30,8 +30,8 @@
         </main>
         
     </div>
+</body>
     <div class="align-self-end">
         @include('partials.footer')
     </div>
-</body>
 </html>
