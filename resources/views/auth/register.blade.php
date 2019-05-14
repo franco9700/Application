@@ -24,7 +24,7 @@
                                 @endif
                             </div>
                         </div>
-<!-- Correo electronico    -->
+    <!-- Correo electronico    -->
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
@@ -38,7 +38,7 @@
                                 @endif
                             </div>
                         </div>
-<!-- Contrase;a   -->
+    <!-- Contrase;a   -->
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
@@ -52,7 +52,7 @@
                                 @endif
                             </div>
                         </div>
-<!-- confirmar contrase;a    -->
+    <!-- confirmar contrase;a    -->
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
@@ -60,7 +60,7 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-<!-- Fecha de nacimiento     -->
+    <!-- Fecha de nacimiento     -->
                         <div class="form-group row">
                             <label for="birthdate" class="col-md-4 col-form-label text-md-right">{{ __('Birthdate') }}</label>
 
@@ -74,7 +74,7 @@
                                 @endif
                             </div>
                         </div>
-<!-- Telefono     -->
+    <!-- Telefono     -->
                         <div class="form-group row">
                             <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label>
 
@@ -88,7 +88,7 @@
                                 @endif
                             </div>
                         </div>
-<!-- Colonia     -->
+    <!-- Colonia     -->
                         <div class="form-group row">
                             <label for="neighborhood" class="col-md-4 col-form-label text-md-right">{{ __('Neighborhood') }}</label>
 
@@ -102,7 +102,7 @@
                                 @endif
                             </div>
                         </div>
-<!-- Municipio     -->
+    <!-- Municipio     -->
                         <div class="form-group row">
                             <label for="county" class="col-md-4 col-form-label text-md-right">{{ __('County') }}</label>
 
