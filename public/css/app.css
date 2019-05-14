@@ -10656,11 +10656,11 @@ a.text-dark:focus {
 }
 
 .navbar-laravel {
-  background-color: #fff;
+  background-color: #76b39d;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .body {
-  background-color: #f9f8eb;
+  background-color: #fff;
 }
 
