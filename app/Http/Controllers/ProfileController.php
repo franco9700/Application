@@ -11,6 +11,6 @@ class ProfileController extends Controller
     public function show(){
 
     	$user = Auth::user();
-    	return view('profile', array('user_name' => $user));
+    	return view('profile', array('user' => $user));
     }
 }

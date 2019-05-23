@@ -14,9 +14,13 @@
                         </div>
                     @endif
 
-                    {{ $user_name['name'] }}
+                    {{ $user['name'] }}
 
-                    <h3>Wanna be a provider? Click here to register!<span class="badge badge-secondary">New</span></h3>
+                    @if ($user['user_type'] === 'consumer')
+                    <h3>Wanna be a provider? Click here to register!
+                        <a href="{{ route('provider_register') }}"><span class="badge badge-secondary">New</span></a>
+                    </h3>
+                    @endif
                 </div>
             </div>
         </div>

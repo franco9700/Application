@@ -19,6 +19,10 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('profile', 'ProfileController@show')->middleware(['verified', 'roles:consumer']);
+Route::get('profile', 'ProfileController@show')->name('profile')->middleware('verified');
 
 Route::get('results', 'ProductsController@index')->name('results');
+
+Route::get('provider_register', 'CompaniesController@index')->name('provider_register');
+
+Route::get('company_register', 'CompaniesController@store')->name('company_register');

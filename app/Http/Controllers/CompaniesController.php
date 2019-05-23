@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\companies;
 use Illuminate\Http\Request;
+use Auth;
+use App\User;
 
 class CompaniesController extends Controller
 {
@@ -14,7 +16,7 @@ class CompaniesController extends Controller
      */
     public function index()
     {
-        //
+        return view('provider_register');
     }
 
     /**
@@ -35,7 +37,15 @@ class CompaniesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $provider = new companies($request->all());
+        $user = Auth::user();
+        $provider['user_id'] = $user['id'];
+        $provider->save();
+
+        $changeProvider = new User();
+        $changeProvider->changeToProvider($user['id']);
+
+        return redirect()->route('profile');
     }
 
     /**

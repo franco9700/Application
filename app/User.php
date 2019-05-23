@@ -43,4 +43,13 @@ class User extends Authenticatable implements MustVerifyEmail
         }
         return false;
     }
+
+    public function changeToProvider($id){
+        $user = User::find($id);
+        $user['user_type'] = 'provider';
+        $user->save();
+
+        return redirect()->route('profile');
+
+    }
 }
