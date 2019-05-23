@@ -73,7 +73,11 @@ body {
   color: #212529;
   text-align: left;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   background-color: #f9f8eb;
+=======
+  background-color: #f8fafc;
+>>>>>>> Stashed changes
 =======
   background-color: #f8fafc;
 >>>>>>> Stashed changes
@@ -522,7 +526,11 @@ mark,
 .img-thumbnail {
   padding: 0.25rem;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   background-color: #f9f8eb;
+=======
+  background-color: #f8fafc;
+>>>>>>> Stashed changes
 =======
   background-color: #f8fafc;
 >>>>>>> Stashed changes
@@ -4104,6 +4112,7 @@ input[type=button].btn-block {
 
 .custom-range:focus::-webkit-slider-thumb {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   box-shadow: 0 0 0 1px #f9f8eb, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 
@@ -4114,6 +4123,8 @@ input[type=button].btn-block {
 .custom-range:focus::-ms-thumb {
   box-shadow: 0 0 0 1px #f9f8eb, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 =======
+=======
+>>>>>>> Stashed changes
   box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 
@@ -4123,6 +4134,9 @@ input[type=button].btn-block {
 
 .custom-range:focus::-ms-thumb {
   box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
 
@@ -4324,8 +4338,13 @@ input[type=button].btn-block {
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   background-color: #f9f8eb;
   border-color: #dee2e6 #dee2e6 #f9f8eb;
+=======
+  background-color: #f8fafc;
+  border-color: #dee2e6 #dee2e6 #f8fafc;
+>>>>>>> Stashed changes
 =======
   background-color: #f8fafc;
   border-color: #dee2e6 #dee2e6 #f8fafc;
@@ -10682,12 +10701,17 @@ a.text-dark:focus {
 
 .navbar-laravel {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   background-color: #76b39d;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .body {
   background-color: #fff;
+=======
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+>>>>>>> Stashed changes
 =======
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
