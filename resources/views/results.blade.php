@@ -11,7 +11,12 @@
                         </div>
                     @endif
 
-                    @include('partials.product')
+                    @if ($error)
+                        @include('partials.product')
+                    @else
+                        No se encontro tu producto. Por favor revisa tu busqueda.
+                    @endif
+
         
         </div>
     </div>

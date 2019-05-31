@@ -6,6 +6,7 @@ use App\products;
 use App\categories;
 use App\subsidiaries;
 use Illuminate\Http\Request;
+use Validator;
 
 class ProductsController extends Controller
 {
@@ -24,7 +25,16 @@ class ProductsController extends Controller
             $products ->subsidiary;
         });
 
-        return view('results', array('product_search' => $products));
+        $controller = new Controller;
+
+        $error = $controller->hasInput($products);
+
+        if ($error){
+            return view('results', array('product_search' => $products))->with('error', $error);
+        }
+        else{
+            return view('results')->with('error', $error);
+        }
     }
 
     /**
