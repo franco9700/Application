@@ -14,7 +14,8 @@
                     @if ($error)
                         @include('partials.product')
                     @else
-                        No se encontro tu producto. Por favor revisa tu busqueda.
+                        <h2>No se encontro tu producto.</h2>
+                        <h4>Por favor revisa tu busqueda.</h4> 
                     @endif
 
         

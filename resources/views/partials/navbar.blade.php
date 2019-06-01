@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-laravel">
     <div class="container">
         <div class="col-md-3">
-	        <a class="navbar-brand" href="{{ url('/') }}">
+	        <a class="navbar-brand collapse navbar-collapse" href="{{ url('/') }}">
 	        <!-- Imagen del logo  -->
 	            <img src="/images/Find.MI.png" alt="Logo de Find.MI" height="65" width="95">
 	        </a>
@@ -9,13 +9,13 @@
 	            <span class="navbar-toggler-icon"></span>
 	        </button>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 navbar-brand">
         	@include('partials.search')
         </div>
         
         <div class="col-md-3">
 
-	        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	        <div class="navbar-brand form-inline" id="navbarSupportedContent">
 	            <!-- Left Side Of Navbar -->
 	            <ul class="navbar-nav mr-auto">
 
