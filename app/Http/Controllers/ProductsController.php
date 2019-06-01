@@ -17,7 +17,10 @@ class ProductsController extends Controller
      */
     public function index(Request $request)
     {
-        //$products = Products::where('name', 'LIKE', "%$request->product_name%")->get();
+        /*$client_ip = $request->ip();
+
+        dd($client_ip);*/
+
         $products = Products::Search($request->product_name)->get();
 
         $products->each(function($products){

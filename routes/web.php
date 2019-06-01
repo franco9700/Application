@@ -26,3 +26,9 @@ Route::get('results', 'ProductsController@index')->name('results');
 Route::get('provider_register', 'CompaniesController@index')->name('provider_register');
 
 Route::get('company_register', 'CompaniesController@store')->name('company_register');
+
+Route::get('subsidiary_register', 'SubsidiariesController@index')->name('subsidiary_register');
+
+Route::get('save_subsidiary', 'SubsidiariesController@store')->name('save_subsidiary');
+
+Route::get('my_company', 'CompaniesController@show')->name('my_company');
