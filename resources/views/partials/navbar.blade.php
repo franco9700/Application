@@ -35,18 +35,18 @@
 
 	                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 	                            
-	                            <a class="dropdown-item" href="{{ url('/profile') }}">Pérfil
+	                            <a class="dropdown-item" href="{{ url('/profile') }}">Profile
 	                            </a>
 
 	                            @if(Auth::user()->user_type == 'provider')
-	                            	<a class="dropdown-item" href="{{ route('my_company') }}">Mi compañia
+	                            	<a class="dropdown-item" href="{{ route('my_company') }}">My company
 	                            </a>
 	                            @endif
 
 	                            <a class="dropdown-item" href="{{ route('logout') }}"
 	                               onclick="event.preventDefault();
 	                                             document.getElementById('logout-form').submit();">
-	                                {{ __('Cerrar sesión') }}
+	                                {{ __('Logout') }}
 	                            </a>
 
 	                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

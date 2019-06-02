@@ -29,6 +29,7 @@
                 <div class="card-title">
                     <h3>Here your information</h3>
                 </div>
+                <hr>
                 <div class="card-text">
                     <div class="row justify-content-center">
                         <div class="col-sm-2">
@@ -73,6 +74,7 @@
                         </div>
                     </div>
                 </div>
+                <hr>
                 <div class="row justify-content-end">
                     <div class="col-md-3">
                         <a href="#edit" class="btn btn-primary ">Edit</a>
