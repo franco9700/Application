@@ -9,17 +9,14 @@
 	            <span class="navbar-toggler-icon"></span>
 	        </button>
         </div>
-        <div class="col-md-6 navbar-brand">
+        <div class="col-md-6">
         	@include('partials.search')
         </div>
         
         <div class="col-md-3">
 
-	        <div class="navbar-brand form-inline" id="navbarSupportedContent">
+	        <div class="navbar-brand" id="navbarSupportedContent">
 	            <!-- Left Side Of Navbar -->
-	            <ul class="navbar-nav mr-auto">
-
-	            </ul>
 				@guest
 					<div class="btn-group" role="group" aria-label="Basic example">
 						<a type="button" class="btn btn-success" href="{{ route('login') }}">{{ __('Login') }}</a>
