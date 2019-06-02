@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\subsidiaries;
+use App\companies;
 use Illuminate\Http\Request;
 
 class SubsidiariesController extends Controller
@@ -14,7 +15,7 @@ class SubsidiariesController extends Controller
      */
     public function index()
     {
-        //
+        return view ('subsidiary_register');
     }
 
     /**
@@ -35,7 +36,16 @@ class SubsidiariesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $subsidiary= new subsidiaries($request->all());
+        
+        $companies = new companies;
+
+        $company= $companies->getCompany();
+
+        $subsidiary['company_id'] = $company['id'];
+        $subsidiary->save();
+
+        return redirect()->route('my_company');
     }
 
     /**

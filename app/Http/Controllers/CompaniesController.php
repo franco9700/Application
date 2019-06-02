@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\companies;
+use App\subsidiaries;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
@@ -56,7 +57,18 @@ class CompaniesController extends Controller
      */
     public function show(companies $companies)
     {
-        //
+
+        $companies = new companies;
+
+        $company= $companies->getCompany();
+
+        $subsidiaries = $companies->getSubsidiaries();
+
+        $controller = new Controller;
+        $error = $controller->hasInput($subsidiaries);
+
+        return view('company')->with('company', $company)->with('subsidiaries', $subsidiaries)->with('error', $error);
+
     }
 
     /**
