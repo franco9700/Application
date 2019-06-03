@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class products extends Model
 {
+	protected $fillable = [
+        'name', 'description', 'stock', 'price', 'img', 'category_id', 'subsidiary_id'
+    ];
+
     public function scopeSearch($query, $name){
 
     	return $query->where('name', 'LIKE', "%$name%");

@@ -44,6 +44,9 @@
 	                            @if(Auth::user()->user_type == 'provider')
 	                            	<a class="dropdown-item" href="{{ route('my_company') }}">Mi compañia
 	                            </a>
+
+	                            <a class="dropdown-item" href="{{ route('my_products') }}">Mis productos
+	                            </a>
 	                            @endif
 
 	                            <a class="dropdown-item" href="{{ route('logout') }}"

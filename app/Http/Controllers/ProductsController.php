@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\products;
 use App\categories;
 use App\subsidiaries;
+use App\companies;
 use Illuminate\Http\Request;
 use Validator;
+use Auth;
 
 class ProductsController extends Controller
 {
@@ -58,7 +60,11 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $products = new products($request->all());
+
+        $products->save();
+
+        return redirect()->route('my_products');
     }
 
     /**
@@ -69,7 +75,30 @@ class ProductsController extends Controller
      */
     public function show(products $products)
     {
-        //
+        $user = Auth::user();
+
+        $products = products::select('products.*')
+        ->join('subsidiaries', 'subsidiaries.id', '=', 'products.subsidiary_id')
+        ->join('companies', 'companies.id', '=', 'subsidiaries.company_id')
+        ->join('users', 'users.id', '=', 'companies.user_id')
+        ->where('users.id', $user['id'])
+        ->get();
+
+        $products->each(function($products){
+            $products ->category;
+            $products ->subsidiary;
+        });
+
+        $controller = new Controller;
+
+        $error = $controller->hasInput($products);
+
+        if ($error){
+            return view('show_products', array('products' => $products))->with('error', $error);
+        }
+        else{
+            return view('show_products')->with('error', $error);
+        }
     }
 
     /**

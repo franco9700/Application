@@ -52,4 +52,20 @@ class User extends Authenticatable implements MustVerifyEmail
         return redirect()->route('profile');
 
     }
+
+    public function checkIfSubsidiaries(){
+        $user = Auth::user();
+
+        $subsidiaries = subsidiaries::select('subsidiaries.*')
+        ->join('companies', 'companies.id', '=', 'subsidiaries.company_id')
+        ->join('users', 'users.id', '=', 'companies.user_id')
+        ->where('users.id', $user['id'])
+        ->get();
+
+        $controller = new Controller;
+
+        $error = $controller->hasInput($products);
+
+        return $error;
+    }
 }
