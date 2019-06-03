@@ -5,6 +5,7 @@
                 <div class="row">
                     <div class="col">
                         <h5 class="card-title">{{ $product->name }}</h5>
+                        <hr>
                         <p class="card-text">
                             {{$product->description}}
                             <br>
@@ -20,32 +21,7 @@
                         <button type="button" class="btn btn-warning"><link href="https://useiconic.com/open/#" rel="stylesheet">Agregar a la lista</button>
                     </div>
                 </div>
-          </div>
+            </div>
         </div>
     </div>
 @endforeach
-
-<!-- 
-<table class="table table-stripped">
-    <thead>
-        <td>Name</td>
-        <td>Category</td>
-        <td>Stock</td>
-        <td>Price</td>
-        <td>Subsidiaries</td>
-    </thead>
-    <tbody>
-        
-        <tr>
-            <td></td>
-            <td>{{ $product->category->description }}</td>
-            <td>{{ $product->stock }}</td>
-            <td></td>
-            <td>{{ $product->subsidiary->name }}</td>
-
-        </tr>
-
-
-    </tbody>
-</table>
---> 

@@ -9,17 +9,14 @@
 	            <span class="navbar-toggler-icon"></span>
 	        </button>
         </div>
-        <div class="col-md-6 navbar-brand">
+        <div class="col-md-6">
         	@include('partials.search')
         </div>
         
         <div class="col-md-3">
 
-	        <div class="navbar-brand form-inline" id="navbarSupportedContent">
+	        <div class="navbar-brand" id="navbarSupportedContent">
 	            <!-- Left Side Of Navbar -->
-	            <ul class="navbar-nav mr-auto">
-
-	            </ul>
 				@guest
 					<div class="btn-group" role="group" aria-label="Basic example">
 						<a type="button" class="btn btn-success" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -38,11 +35,11 @@
 
 	                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 	                            
-	                            <a class="dropdown-item" href="{{ url('/profile') }}">Pérfil
+	                            <a class="dropdown-item" href="{{ url('/profile') }}">Profile
 	                            </a>
 
 	                            @if(Auth::user()->user_type == 'provider')
-	                            	<a class="dropdown-item" href="{{ route('my_company') }}">Mi compañia
+	                            	<a class="dropdown-item" href="{{ route('my_company') }}">My company
 	                            </a>
 
 	                            <a class="dropdown-item" href="{{ route('my_products') }}">Mis productos
@@ -52,7 +49,7 @@
 	                            <a class="dropdown-item" href="{{ route('logout') }}"
 	                               onclick="event.preventDefault();
 	                                             document.getElementById('logout-form').submit();">
-	                                {{ __('Cerrar sesión') }}
+	                                {{ __('Logout') }}
 	                            </a>
 
 	                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

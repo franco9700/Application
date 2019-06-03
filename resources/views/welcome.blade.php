@@ -17,14 +17,14 @@
 
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="top-right    btn-group">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a type="button" class="btn btn-primary" href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a type="button" class="btn btn-success" href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a type="button" class="btn btn-primary" href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
                 </div>

@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Datos de la subsidiaria</div>
+                <div class="card-header">Subsidiary data</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -18,7 +18,7 @@
                         @csrf
     <!-- Nombre de la subsidiaria    -->
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="name" value="" required autofocus maxlength="30">
@@ -26,7 +26,7 @@
                         </div>
     <!-- Direccion   -->
                         <div class="form-group row">
-                            <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Dirección') }}</label>
+                            <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
 
                             <div class="col-md-6">
                                 <input id="address" type="text" class="form-control" name="address" value="" required>
@@ -35,7 +35,7 @@
 
     <!-- Coordenadas   -->
                         <div class="form-group row">
-                            <label for="coordinates" class="col-md-4 col-form-label text-md-right">{{ __('Coordenadas (Prueba)') }}</label>
+                            <label for="coordinates" class="col-md-4 col-form-label text-md-right">{{ __('Coordenates (Test)') }}</label>
 
                             <div class="col-md-6">
                                 <input id="coordinates" type="text" class="form-control" name="coordinates" value="" required maxlength="15">
@@ -45,7 +45,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Guardar subsidiaria') }}
+                                    {{ __('Save') }}
                                 </button>
                             </div>
                         </div>
