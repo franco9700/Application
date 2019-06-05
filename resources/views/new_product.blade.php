@@ -65,7 +65,18 @@
                             <label for="category" class="col-md-4 col-form-label text-md-right">{{ __('Category') }}</label>
 
                             <div class="col-md-6">
-                                <input id="category" type="text" class="form-control" name="category_id" value="" required>
+                                <select id="category" type="text" class=form-control onchange="getIndexCategories()">
+
+                                    <option>Seleccione una categoria</option>
+                                    
+                                    @foreach($categories as $category)
+                                        <option>{{ $category->description }}</option>
+
+                                    @endforeach
+                                    
+                                </select>
+                                <input type="text" id="category-id" name="category_id">
+
                             </div>
                         </div>
 
@@ -74,7 +85,18 @@
                             <label for="subsidiary" class="col-md-4 col-form-label text-md-right">{{ __('Subsidiary') }}</label>
 
                             <div class="col-md-6">
-                                <input id="subsidiary" type="text" class="form-control" name="subsidiary_id" value="" required>
+                                <select id="subsidiary" type="text" class="form-control" onchange="getIndexSubsidiary()" required>
+                                    <option>Seleccione una subsidiaria</option>
+                                    
+                                    @foreach($subsidiaries as $subsidiary)
+                                        <option>{{ $subsidiary->name }}</option>
+
+                                    @endforeach
+
+                                </select>
+
+                                <input type="hidden" id="subsidiary-id" name="subsidiary_id">
+
                             </div>
                         </div>
                         <div class="form-group row mb-0">
@@ -90,4 +112,19 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+    function getIndexSubsidiary() {
+      document.getElementById("subsidiary-id").value =
+      document.getElementById("subsidiary").selectedIndex;
+    }
+
+    function getIndexCategories() {
+      document.getElementById("category-id").value =
+      document.getElementById("category").selectedIndex;
+    }
+</script>
+
 @endsection

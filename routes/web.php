@@ -43,3 +43,5 @@ Route::get('my_products', 'ProductsController@show')->name('my_products');
 
 Route::get('product_selected', 'ProductsController@selected')->name('product_selected');
 
+Route::get('new_product', 'ProductsController@new')->name('new_product');
+

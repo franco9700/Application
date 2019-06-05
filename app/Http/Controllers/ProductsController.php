@@ -57,6 +57,24 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
+        $category_index = $request->category_id - 1;
+
+        $categories = categories::all();
+
+        $id = $categories[$category_index]->id;
+
+        $request['category_id'] = $id;
+
+        $subsidiary_index = $request->subsidiary_id - 1;
+
+        $company = new companies;
+
+        $subsidiaries = $company->getSubsidiaries();
+
+        $id = $subsidiaries[$subsidiary_index]->id;
+
+        $request['subsidiary_id'] = $id;
+
         $products = new products($request->all());
 
         $products->save();
@@ -140,5 +158,15 @@ class ProductsController extends Controller
         $product ->subsidiary;
 
         return view ('product_selected', array('product' => $product));
+    }
+
+    public function new(){
+        $company = new companies;
+
+        $subsidiaries = $company->getSubsidiaries();
+
+        $categories = categories::all();
+
+        return view ('new_product', array('subsidiaries' => $subsidiaries), array('categories' => $categories));
     }
 }

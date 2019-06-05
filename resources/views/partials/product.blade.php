@@ -32,13 +32,6 @@
                                         <p>{{ $product->subsidiary->address_address }}</p>
                                     </div>
                                 </div>
-
-                                <div class="row">
-                                    <div class="col-lg-2 col-sm-6">
-                                        <span class="meters"></span> meters from you
-                                    </div>
-                                </div>
-
                         </div>
                         <div class="col" style="max-width: 10rem;">
                             <img src="https://static.grainger.com/rp/s/is/image/Grainger/6CTF0_AS02?$zmmain$" alt="imagen de prueba" class="img-fluid">
