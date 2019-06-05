@@ -34,6 +34,9 @@
 	                        </a>
 
 	                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+	                            <a class="dropdown-item" href="{{ url('/home') }}">Home
+	                            </a>
 	                            
 	                            <a class="dropdown-item" href="{{ url('/profile') }}">Profile
 	                            </a>
@@ -42,7 +45,7 @@
 	                            	<a class="dropdown-item" href="{{ route('my_company') }}">My company
 	                            </a>
 
-	                            <a class="dropdown-item" href="{{ route('my_products') }}">Mis productos
+	                            <a class="dropdown-item" href="{{ route('my_products') }}">My products
 	                            </a>
 	                            @endif
 
