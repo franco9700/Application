@@ -41,3 +41,5 @@ Route::get('my_company', 'CompaniesController@show')->name('my_company');
 
 Route::get('my_products', 'ProductsController@show')->name('my_products');
 
+Route::get('product_selected', 'ProductsController@selected')->name('product_selected');
+

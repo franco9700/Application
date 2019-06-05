@@ -19,9 +19,6 @@ class ProductsController extends Controller
      */
     public function index(Request $request)
     {
-        /*$client_ip = $request->ip();
-
-        dd($client_ip);*/
 
         $products = Products::Search($request->product_name)->get();
 
@@ -133,5 +130,15 @@ class ProductsController extends Controller
     public function destroy(products $products)
     {
         //
+    }
+
+    public function selected(Request $request)
+    {
+        $product= products::where('id', $request->product_id)->get()->first();
+
+        $product ->category;
+        $product ->subsidiary;
+
+        return view ('product_selected', array('product' => $product));
     }
 }
