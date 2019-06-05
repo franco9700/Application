@@ -75,7 +75,7 @@
                                     @endforeach
                                     
                                 </select>
-                                <input type="text" id="category-id" name="category_id">
+                                <input type="hidden" id="category-id" name="category_id">
 
                             </div>
                         </div>
