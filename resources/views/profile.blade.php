@@ -76,8 +76,8 @@
                 </div>
                 <hr>
                 <div class="row justify-content-end">
-                    <div class="col-md-3">
-                        <a href="#edit" class="btn btn-primary ">Edit</a>
+                    <div class="col-md-2">
+                        <a href="#edit" class="btn btn-warning btn-block disabled">Edit</a>
                     </div>
                 </div>
             </div>
