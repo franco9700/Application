@@ -37,7 +37,7 @@
                             <label for="img" class="col-md-4 col-form-label text-md-right">{{ __('Profile picture') }}</label>
 
                             <div class="input-group col-md-6 custom-file">
-                                <input id="picture" type="file" class="" name="rfc" value=""  maxlength="15">
+                                <input id="picture" type="file" class="" name="img" value=""  maxlength="15" required>
                             </div>
 
                         </div>
