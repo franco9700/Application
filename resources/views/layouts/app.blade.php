@@ -34,4 +34,7 @@
     <div class="align-self-end">
         @include('partials.footer')
     </div>
+
+    @yield('scripts')
+
 </html>

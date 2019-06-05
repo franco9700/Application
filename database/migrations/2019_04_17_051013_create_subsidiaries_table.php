@@ -16,8 +16,9 @@ class CreateSubsidiariesTable extends Migration
         Schema::create('subsidiaries', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 50);
-            $table->string('address', 100);
-            $table->string('coordinates', 50);
+            $table->string('address_address')->nullable();
+            $table->double('address_latitude')->nullable();
+            $table->double('address_longitude')->nullable();
             $table->timestamps();
             $table->unsignedBigInteger('company_id');
 

@@ -41,15 +41,7 @@
 					                    			<h5 class="text-rigth">Address:</h5>	
 					                    		</div>
 					                    		<div class="col">
-					                    			<p>{{ $subsidiary->address }}</p>
-					                    		</div>
-					                    	</div>
-					                    	<div class="row">
-					                    		<div class="col-sm-3">
-					                    			<h5 class="text-rigth">Location:</h5>	
-					                    		</div>
-					                    		<div class="col">
-					                    			<p>{{ $subsidiary-> coordenates}}</p>
+					                    			<p>{{ $subsidiary->address_address }}</p>
 					                    		</div>
 					                    	</div>
 					                    </div>

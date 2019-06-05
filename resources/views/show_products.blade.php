@@ -47,7 +47,7 @@
                                                 <h5>Category:</h5>
                                             </div>
                                             <div class="col">
-                                                <p>{{ $product->category_id }}</p>
+                                                <p>{{ $product->category->description }}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -55,7 +55,7 @@
                                                 <h5>Subsidiary:</h5>
                                             </div>
                                             <div class="col">
-                                                <p>{{ $product->subsidiary_id }}</p>
+                                                <p>{{ $product->subsidiary->name }}</p>
                                             </div>
                                         </div>
                                 </div>
