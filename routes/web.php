@@ -35,7 +35,7 @@ Route::get('subsidiary_register', 'SubsidiariesController@index')->name('subsidi
 
 Route::get('save_subsidiary', 'SubsidiariesController@store')->name('save_subsidiary');
 
-Route::get('save_product', 'ProductsController@store')->name('save_product');
+Route::post('save_product', 'ProductsController@store')->name('save_product');
 
 Route::get('my_company', 'CompaniesController@show')->name('my_company');
 
