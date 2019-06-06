@@ -38,12 +38,15 @@
                             <input id="address-longitude" type="hidden" name="address_longitude" value="0">
                         </div>
 
-    <!-- Mapa -->                    
-
-                        <div id="address-map-container" style="width:100%;height:400px; ">
-                            <div style="width: 100%; height: 100%" id="address-map"></div>
+    <!-- Mapa -->       
+                        <div class="row">
+                            <div class="col">
+                                <div id="address-map-container" style="width:100%;height:400px; ">
+                                    <div style="width: 100%; height: 100%" id="address-map"></div>
+                                </div>
+                            </div>
                         </div>
-
+                        <br>
                         <div class="form-group row justify-content-end">
                             <div class="col-auto">
                                 <button type="submit" class="btn-block btn btn-success">

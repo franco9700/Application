@@ -25,10 +25,10 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-lg-2 col-sm-6">
+                                    <div class="col-lg-4">
                                         <h5>Location:</h5>
                                     </div>
-                                    <div class="col-lg-2 col-sm-6">
+                                    <div class="col-auto">
                                         <p>{{ $product->subsidiary->address_address }}</p>
                                     </div>
                                 </div>
@@ -38,16 +38,15 @@
                         </div>
                     </div>
                     <br>
-                    <div class="row">
-                        <div class="col col-lg-10 col-md-8 col-sm-2">
-                            <button type="button" class="btn btn-warning disabled"><link href="#" rel="stylesheet">Add to shopping list</button>
-                        </div>
-
-                        <div class="col col-lg-10 col-md-8 col-sm-2">
-                            <button type="submit" class="btn btn-success">Find it!</button>
-                        </div>
-
+                </div>
+                <div class="row justify-content-end">
+                    <div class="col-lg-2 col-md">
+                        <button type="submit" class="btn btn-success btn-block">Find it!</button>
                     </div>
+                    <div class="col-lg-4 col-md">
+                        <button type="button" class="btn btn-warning btn-block disabled"><link href="#" rel="stylesheet">Add to shopping list</button>
+                    </div>
+
                 </div>
             </div>
         </div>

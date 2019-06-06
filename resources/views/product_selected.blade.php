@@ -2,20 +2,67 @@
 
 @section('content')
 
-
-
-{{ $product->name }} <br>
-{{ $product-> description}} <br>
-{{ $product-> stock}} <br>
-{{ $product-> price}} <br> 
-{{ $product-> category->description}} <br>
-{{ $product-> subsidiary->name}} <br>
-{{ $product-> subsidiary->address_address}} <br>
-    
-<div id="address-map-container" style="width:500px;height:400px; ">
-                            <div style="width: 100%; height: 100%" id="map"></div>
-                        </div>
-
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <div class="row">
+        <div class="col">
+          <h1>{{ $product->name }}</h1>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col">
+          {{ $product-> description}}
+        </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-lg-2 col-sm-6">
+              <h5>Precio:</h5>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+              <p>${{ $product->price }}</p>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+              <h5>Stock:</h5>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+              <p>{{ $product->stock }}</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-4">
+              <h5>Category:</h5>
+          </div>
+          <div class="col">
+              <p>{{ $product->category->description }}</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-4">
+              <h5>Subsidiary:</h5>
+          </div>
+          <div class="col">
+              <p>{{ $product->subsidiary->name }}</p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-4">
+              <h5>Address:</h5>
+          </div>
+          <div class="col">
+              <p>{{ $product->subsidiary->address_address}}</p>
+          </div>
+      </div>
+    </div>
+    <div class="col">
+      <div id="address-map-container" style="width:500px;height:400px; ">
+          <div style="width: 100%; height: 100%" id="map"></div>
+      </div>
+    </div>
+  </div>
+</div> 
 
 @endsection
 
