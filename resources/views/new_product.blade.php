@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <form method="get" action="{{ route('save_product') }}">
+                    <form method="post" action="{{ route('save_product') }}" enctype="multipart/form-data">
                         @csrf
     <!-- Nombre del producto    -->
                         <div class="form-group row">
@@ -53,10 +53,10 @@
 
     <!-- Imagen   -->
                         <div class="form-group row">
-                            <label for="img" class="col-md-4 col-form-label text-md-right">{{ __('Image') }}</label>
+                            <label for="img-file" class="col-md-4 col-form-label text-md-right">{{ __('Image') }}</label>
 
                             <div class="col-md-6">
-                                <input id="img" type="file" class="" name="img" value="" required>
+                                <input id="img-file" type="file" class="" name="img-file" value="" required>
                             </div>
                         </div>
 

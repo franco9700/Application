@@ -9,6 +9,7 @@ use App\companies;
 use Illuminate\Http\Request;
 use Validator;
 use Auth;
+use Storage; 
 
 class ProductsController extends Controller
 {
@@ -57,6 +58,18 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, ['img-file' => 'required|image']);
+        if($request->hasfile('img-file'))
+         {
+            $file = $request->file('img-file');
+            $name=time().$file->getClientOriginalName();
+            $filePath = 'images/' . $name;
+            $request['img'] = $name;
+            Storage::disk('s3')->put($filePath, file_get_contents($file));
+
+         }
+
+
         $category_index = $request->category_id - 1;
 
         $categories = categories::all();
